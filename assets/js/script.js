@@ -21,3 +21,20 @@ const togglerNav = function (){
 }
 
 addEventOnElements(navbarTogglers, "click", togglerNav);
+
+const closeNav = function () {
+    navbar.classList.remove("active");
+    overlay.classList.remove("active");
+}
+
+addEventOnElements(navbarLinks, "click", closeNav);
+
+
+
+// header 
+
+const header = document.querySelector("[data-header]");
+
+window.addEventListener("scroll", function () {
+    header.classList[window.scrollY > 50 ? "add" : "remove"]("active")
+})
